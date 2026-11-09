@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@use 'primeicons/primeicons.css';
+@use '@/assets/layout/layout.scss';
+@use '@/assets/demo/demo.scss';
+
+/* Print: hide the application chrome so only the page content (e.g. a result
+   sheet or transcript) is printed. Feature pages additionally hide their own
+   toolbars/tabs via the `.no-print` class. */
+@media print {
+    .layout-topbar,
+    .layout-sidebar,
+    .layout-footer,
+    .layout-mask {
+        display: none !important;
+    }
+
+    .layout-main-container {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .layout-main {
+        padding: 0 !important;
+    }
+
+    body {
+        background: #fff !important;
+    }
+}
